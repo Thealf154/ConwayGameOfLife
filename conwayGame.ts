@@ -64,9 +64,11 @@ class GameOfLife {
         let y = i * this.cellSize;
         this.ctx.fillRect(x, y, this.cellSize, this.cellSize);
         this.ctx.fillStyle = cellColor;
-        this.ctx.lineWidth = 3;
-        this.ctx.strokeStyle = "white";
-        this.ctx.stroke();
+
+        // Paint the border
+        //this.ctx.strokeStyle = "white";
+        //this.ctx.lineWidth = 0.4;
+        //this.ctx.strokeRect(x, y, this.cellSize, this.cellSize);
       }
     }
   };
@@ -191,8 +193,7 @@ class GameOfLife {
   };
 
   // Change the color on demand
-  changeColor = (newColor: string):void => {
+  changeColor = (newColor: string): void => {
     this.aliveColor = newColor;
-  }
-
+  };
 }

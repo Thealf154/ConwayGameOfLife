@@ -81,6 +81,8 @@ const paintControls = () => {
       runInterval = setInterval(start, speedValue)
     }
   });
+
+  draw();
 };
 
 
@@ -146,7 +148,7 @@ const resetGenerations = (): void => {
 };
 
 // Pencil section
-const draw = (canvas, game) => {
+const draw = () => {
   canvas.addEventListener("mousedown", (event) => {
     canvas.addEventListener("mousemove", handleMouseMove, false);
   });

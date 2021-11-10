@@ -71,6 +71,7 @@ var paintControls = function () {
             runInterval = setInterval(start, speedValue);
         }
     });
+    draw();
 };
 var startOrPauseGame = function (action) {
     // Start and reset the game from the user's drawing
@@ -125,7 +126,7 @@ var resetGenerations = function () {
     document.getElementById("generations").innerText = "Generations: " + 0;
 };
 // Pencil section
-var draw = function (canvas, game) {
+var draw = function () {
     canvas.addEventListener("mousedown", function (event) {
         canvas.addEventListener("mousemove", handleMouseMove, false);
     });

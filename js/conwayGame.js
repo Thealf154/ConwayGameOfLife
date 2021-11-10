@@ -35,9 +35,10 @@ var GameOfLife = /** @class */ (function () {
                     var y = i * _this.cellSize;
                     _this.ctx.fillRect(x, y, _this.cellSize, _this.cellSize);
                     _this.ctx.fillStyle = cellColor;
-                    _this.ctx.lineWidth = 3;
-                    _this.ctx.strokeStyle = "white";
-                    _this.ctx.stroke();
+                    // Paint the border
+                    //this.ctx.strokeStyle = "white";
+                    //this.ctx.lineWidth = 0.4;
+                    //this.ctx.strokeRect(x, y, this.cellSize, this.cellSize);
                 }
             }
         };
